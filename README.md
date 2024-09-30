@@ -14,7 +14,8 @@
 
 ## Time de Desenvolvedores
 - [Bruno Wierzbicki]
-- 
+
+  
 ## Objetivo do Software
 O objetivo da Biblioteca Virtual é fornecer uma plataforma onde usuários possam pesquisar, cadastrar e visualizar detalhes de livros. A aplicação será intuitiva e permitirá o fácil gerenciamento de informações sobre diversos livros.
 
