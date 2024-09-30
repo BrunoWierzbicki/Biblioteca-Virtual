@@ -13,10 +13,8 @@
 - JSON Server (simulação de dados)
 
 ## Time de Desenvolvedores
-- [Seu Nome]
-- [Nome do colaborador 1]
-- [Nome do colaborador 2]
-
+- [Bruno Wierzbicki]
+- 
 ## Objetivo do Software
 O objetivo da Biblioteca Virtual é fornecer uma plataforma onde usuários possam pesquisar, cadastrar e visualizar detalhes de livros. A aplicação será intuitiva e permitirá o fácil gerenciamento de informações sobre diversos livros.
 
