@@ -1,0 +1,4 @@
+com\mycompany\biblioteca\virtual\model\Livro.class
+com\mycompany\biblioteca\virtual\repository\LivroRepository.class
+com\mycompany\biblioteca\virtual\BibliotecaVirtualApplication.class
+com\mycompany\biblioteca\virtual\controller\LivroController.class

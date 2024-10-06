@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Biblioteca Virtual - Cadastro</title>
+  <!-- Referência ao CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Joti+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <div class="background" th:style="'background-image: url(' + @{/img/Fundo.jpg} + ');'">
+        <!-- Menu Lateral -->
+        <div class="menu-lateral">
+            <h2>Biblioteca Virtual</h2>
+            <ul>
+                <li><a th:href="@{/}">Início</a></li>
+                <li><a th:href="@{/livros/cadastro}">Cadastrar Livro</a></li>
+                <li><a th:href="@{/livros/listagem}">Todos os Livros</a></li>
+            </ul>
+        </div>
+
+      <!-- Área de cadastro de livros -->
+        <div class="area-cadastro">
+            <h1>Cadastrar Livro</h1>
+
+            <!-- Formulário para cadastro de livros -->
+        <form class="form-cadastro" th:action="@{/livros/cadastro}" th:object="${livro}" method="post">
+            
+            <!-- Nome -->
+            <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" th:field="*{nome}" placeholder="Nome" required />
+            </div>
+
+            <!-- Gênero -->
+            <div class="form-group">
+                <label for="genero">Gênero</label>
+                <input type="text" id="genero" th:field="*{genero}" placeholder="Gênero" required />
+            </div>
+
+            <!-- Lançamento -->
+            <div class="form-group">
+                <label for="anoLancamento">Lançamento</label>
+                <input type="number" id="anoLancamento" th:field="*{anoLancamento}" placeholder="Ano de Lançamento" required min="0" max="9999" />
+            </div>
+
+            <!-- Sinopse -->
+            <div class="form-group">
+                <label for="sinopse">Sinopse</label>
+                <input type="text" id="sinopse" th:field="*{sinopse}" placeholder="Sinopse" required />
+            </div>
+
+            <!-- Botão de cadastrar -->
+            <button class="form-cadastro-button" type="submit">Cadastrar</button>
+
+        </form>
+        </div>
+    </div>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
