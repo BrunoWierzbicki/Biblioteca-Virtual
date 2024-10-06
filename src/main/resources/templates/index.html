@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Biblioteca Virtual - Início</title>
+  <!-- Referência ao CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Joti+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <div class="background" th:style="'background-image: url(' + @{/img/Fundo.jpg} + ');'">
+        <!-- Menu Lateral -->
+        <div class="menu-lateral">
+            <h2>Biblioteca Virtual</h2>
+            <ul>
+                <li><a th:href="@{/}">Início</a></li>
+                <li><a th:href="@{/livros/cadastro}">Cadastrar Livro</a></li>
+                <li><a th:href="@{/livros/listagem}">Todos os Livros</a></li>
+            </ul>
+    </div>
+
+    <!-- Área de Pesquisa -->
+        <div class="area-pesquisa">
+            <h1>Buscar Livro</h1>
+            <form th:action="@{/livros/buscar}" method="get">
+                <div class="form-pesquisa">
+                    <label for="pesquisa"></label>
+                    <input type="text" id="pesquisa" name="nome" placeholder="Digite o nome do livro" required>
+                    <button type="submit">
+                        <!-- Referência à imagem -->
+                        <img th:src="@{/img/lupa.png}" alt="Pesquisar">
+                    </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Referência ao JavaScript -->
+  <script th:src="@{/js/script.js}"></script>
+</body>
+</html>

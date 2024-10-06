@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Virtual - Detalhes</title>
+    <!-- Referência ao CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Joti+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <div class="background" th:style="'background-image: url(' + @{/img/Fundo.jpg} + ');'">
+        <!-- Menu Lateral -->
+    <div class="menu-lateral">
+        <h2>Biblioteca Virtual</h2>
+        <ul>
+            <li><a th:href="@{/}">Início</a></li>
+            <li><a th:href="@{/livros/cadastro}">Cadastrar Livro</a></li>
+            <li><a th:href="@{/livros/listagem}">Todos os Livros</a></li>
+        </ul>
+    </div>
+
+    <!-- Área de detalhes do livro -->
+    <div class="area-detalhes">
+        <h1>Detalhes do Livro</h1>
+
+        <div class="detalhes-group">
+            <!-- Nome do Livro -->
+            <div class="detalhe-item">
+                <label class="detalhe-label" for="nome">Nome:</label>
+                <span class="detalhe-info" id="nome" th:text="${livro.nome}"></span>
+            </div>
+
+            <!-- Gênero -->
+            <div class="detalhe-item">
+                <label class="detalhe-label" for="genero">Gênero:</label>
+                <span class="detalhe-info" id="genero" th:text="${livro.genero}"></span>
+            </div>
+
+            <!-- Lançamento -->
+            <div class="detalhe-item">
+                <label class="detalhe-label" for="anoLancamento">Lançamento:</label>
+                <span class="detalhe-info" id="anoLancamento" th:text="${livro.anoLancamento}"></span>
+            </div>
+
+            <!-- Sinopse -->
+            <div class="detalhe-item">
+                <label class="detalhe-label" for="sinopse">Sinopse:</label>
+                <span class="detalhe-info" id="sinopse" th:text="${livro.sinopse}"></span>
+            </div>
+        </div>
+    </div>
+    
+</div>
+</body>
+</html>
